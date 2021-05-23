@@ -1,92 +1,173 @@
 version: "2.0"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - chào bạn
+      - hi
+      - hello
+      - .
+      - bot
+      - Chào
+      - xin chào
+      - xin chào bạn
+      - chào em
+      - chào anh
+      - chào cậu
+      - chào bác
+      - hello em
+      - hi em
+      - em ơi, cho anh hỏi
+      - bot ơi
+      - cho mình hỏi chút
 
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: give_name
+    examples: |
+      - [Anh](cust_sex) là [Thắng](cust_name)
+      - [Chị](cust_sex) là [Hằng](cust_name)
+      - [Em](cust_sex) là [Trang](cust_name)
+      - [Cô](cust_sex) [Vân](cust_name)
+      - [Chú](cust_sex) [Hùng](cust_name)
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: eat
+    examples: |
+      - Hôm nay ăn gì?
+      - Hôm nay ăn gì
+      - Ăn gì nhở?
+      - Ăn gì nhở
+      - Có món gì ngon không?
+      - Có món gì ngon không
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: goodbye
+    examples: |
+      - tạm biệt
+      - bye
+      - hẹn gặp lại
+      - good bye
+      - bye bye
+      - tạm biệt em
+      - tạm biệt bot nhá
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: do_somethings
+    examples: |
+      - bạn có thể làm gì?
+      - có chức năng gì?
+      - có thể làm gì? 
+      - làm được gì?
+      - chức năng
+      - xem chức năng
+      - hỗ trợ
+      - help
+      - em có thể giúp gì cho anh?
+      - em biết làm gì?
+      - em hỗ trợ anh như thế nào?
+      - cho anh xem các chức năng của em
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: deny
+    examples: |
+      - không được
+      - không
+      - không ao giờ
+      - không thể
+      - đừng có mơ
+      - đừng hòng
+      - đmm, không
+      - no
+      - tôi không thích
+      - tao không thích
+      - đừng có nói vậy
+      - tao không tin
+      - tôi không tin
+      - ngu ngu dốt
+      - chả biết gì cả
+      - còn cái nịt
+      - dở ghê
+      - có thế mà cũng không biết
+      - kém cói
+  - intent: mood_great
+    examples: |
+      - bot giỏi quá
+      - tốt
+      - giỏi
+      - ok
+      - thanks
+      - cảm ơn
+      - tôi cảm ơn
+      - cảm ơn cậu
+      - cảm ơn bạn
+      - great
+      - awsome
+      - bot làm tốt lắm
+      - ui giỏi thế
+      - bot thông minh
+      - đẹp trai đấy
+      - Ênm đệnp léăm
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: unknown
+    examples: |
+      - tôi không biết
+      - bây giờ làm gì nhở?
+      - có những thông tin gì
+      - trưa nay ăn gì bây giờ nhỉ
+      - chọn giúp t bữa trưa phát
+      - ăn trưa nào
+      - tiểu nhị, chọn món
+      - bữa trưa
+      - ăn gì bây giờ
+      - chọn giúp anh một quán ăn
+
+  - intent: major_mark
+    examples: |
+      - điểm của khoa công nghệ thông tin
+      - điểm khoa CNTT
+      - điểm khoa cntt
+      - điểm khoa cơ khí
+      - điểm khoa tự động hoá
+      - điểm của khoa may
+      - điểm của khoa hoá
+      - điểm của khoa cntt
+      - điểm của khoa cơ khí
+      - điểm của khoa tự động hoá
+      - điểm của khoa may
+      - điểm của khoa hoá
+
+  - intent: major_location
+    examples: |
+      - khoa công nghệ thông tin học ở đâu
+      - khoa CNTT học ở đâu
+      - khoa cntt học ở đâu
+      - khoa cơ khí học ở đâu
+      - khoa tự động hoá học ở đâu
+      - khoa may học ở đâu
+      - khoa hoá học ở đâu
+
+  - intent: major_info
+    examples: |
+      - có những khoa gì
+      - thông tin các khoa
+      - khoa đào tạo 
+      - các ngành đào tạo
+      - các khoa của trường
+      - thông tin các ngành đào tạo
+      - ngành đào tạo
+
+  - intent: profile
+    examples: |
+      - hồ hơ nhập học
+      - hồ sơ cá nhân
+      - hồ sơ
+      - yêu cầu cá nhân
+      - yêu cầu thông tin
+      - hồ sơ xét tuyển
+      - thông tin hồ sơ
+
+  - intent: ask_somethings
+    examples: |
+      - Bạn có khoẻ không
+      - Bạn đang nghĩ gì
+      - Tôi yêu bạn
+      - Bạn có nhớ tôi không
+      - Ai đang trả lời?
+      - Ai là người trả lời?
+      - Ai trả lời đó
+      - Bạn là ai?

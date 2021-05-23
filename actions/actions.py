@@ -1,27 +1,32 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+from typing import Text, List, Dict, Any
+from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet, SessionStarted, ActionExecuted, EventType
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
+import json
+import re
 
+class info:
+    def __init__(self, key, value, score, localtion):
+        self.key = key
+        self.value = value
+        self.score = score
+        self.localtion = localtion
 
-# This is a simple example for a custom action which utters "Hello World!"
+list_info = []
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+list_info.append(info('CNTT','2','21.5','Hà Nam'))
+list_info.append(info('Cơ khí','2','24','Hà nội'))
+
+class ActionTesting(Action):
+    def name(self) -> Text:
+        return "action_test"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        text = tracker.latest_message['text']
+        text_input = text.lower()
+        check = False
+        print(tracker.latest_message['intent'].get('name'))
+        dispatcher.utter_message("Nội dung bạn muốn con bot trả lời" + text + list_info[0].key)       

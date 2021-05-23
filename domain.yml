@@ -2,32 +2,82 @@ version: "2.0"
 
 intents:
   - greet
+  - give_name
   - goodbye
-  - affirm
+  - do_somethings
   - deny
   - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - unknown
+  - major_mark
+  - major_location
+  - major_info
+  - profile
+  - ask_somethings
+  - eat
+
+entities:
+  - cust_sex
+  - cust_name
+
+slots:
+  cust_sex:
+    auto_fill: true
+    type: text
+  cust_name:
+    auto_fill: true
+    type: text
 
 responses:
+  utter_greet_with_name:
+    - text: "Kính chào {cust_sex} {cust_name}. ABC Shop có thể giúp gì được {cust_sex} {cust_name} ạ?"
+
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Xin chào bạn, Tôi là bot của Haui. Vui lòng gõ 'chức năng' đẻ biết thêm thông tin"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_do_somethings:
+    - text: ""
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_mood_great:
+    - text: "Được đấy"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "bai"
+
+  utter_deny:
+    - text: "không hiểu gì cơ?"
+
+  utter_unknown:
+    - text: "Tôi không hiểu"
+
+  utter_major_mark:
+    - text: "Điểm"
+
+  utter_major_location:
+    - text: "nơi học"
+
+  utter_major_info:
+    - text: "Ngành học"
+
+  utter_profile:
+    - text: "Thông tin cá nhân"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
+
+actions:
+  - utter_greet
+  - utter_greet_with_name
+  - utter_do_somethings
+  - utter_mood_great
+  - utter_goodbye
+  - utter_deny
+  - utter_unknown
+  - utter_major_mark
+  - utter_major_location
+  - utter_major_info
+  - utter_profile
+  - utter_iamabot
+  - action_test
 
 session_config:
   session_expiration_time: 60

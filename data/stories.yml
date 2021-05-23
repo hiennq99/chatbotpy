@@ -1,30 +1,192 @@
 version: "2.0"
 
 stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: happy path 1
+    steps:
+      - intent: give_name
+      - action: utter_greet_with_name
+      - intent: mood_great
+      - action: utter_mood_great
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: give_name
+    steps:
+      - intent: give_name
+      - action: utter_greet_with_name
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: eat
+    steps:
+      - intent: eat
+      - action: action_test
+
+  - story: ask unknown
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: unknown
+      - action: utter_unknown
+
+  - story: ask major_location
+    steps:
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: ask major_info
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: ask profile
+    steps:
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: profile
+      - action: utter_profile
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: ask major_info location
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: major_info
+      - action: utter_major_info
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: ask do somethings profile
+    steps:
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: profile
+      - action: utter_profile
+      - intent: major_location
+      - action: utter_major_location
+      - intent: profile
+      - action: utter_profile
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask profile
+    steps:
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: profile
+      - action: utter_profile
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: ask do somethins all
+    steps:
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: major_location
+      - action: utter_major_location
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: profile
+      - action: utter_profile
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: ask do unknown
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: unknown
+      - action: utter_do_somethings
+
+  - story: ask mark location
+    steps:
+      - intent: profile
+      - action: utter_profile
+      - intent: major_info
+      - action: utter_major_info
+      - intent: major_mark
+      - action: utter_major_mark
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: ask location mark
+    steps:
+      - intent: profile
+      - action: utter_profile
+      - intent: major_info
+      - action: utter_major_info
+      - intent: major_location
+      - action: utter_major_location
+      - intent: major_mark
+      - action: utter_major_mark
+
+  - story: deny
+    steps:
+      - intent: deny
+      - action: utter_deny
+
+  - story: deny do somthings
+    steps:
+      - intent: deny
+      - action: utter_deny
+      - intent: do_somethings
+      - action: utter_do_somethings
+
+  - story: deny do somthings major
+    steps:
+      - intent: deny
+      - action: utter_deny
+      - intent: do_somethings
+      - action: utter_do_somethings
+      - intent: major_info
+      - action: utter_major_info
+
+  - story: do somethings
+    steps:
+      - intent: do_somethings
+      - action: utter_do_somethings
+
+  - story: do major_mark
+    steps:
+      - intent: major_mark
+      - action: utter_major_mark
+
+  - story: do major_location
+    steps:
+      - intent: major_location
+      - action: utter_major_location
+
+  - story: do major_info
+    steps:
+      - intent: major_info
+      - action: utter_major_info
+
+  - story: do profile
+    steps:
+      - intent: profile
+      - action: utter_profile
+
+  - story: do ask_somethings
+    steps:
+      - intent: major_info
+      - action: utter_do_somethings
