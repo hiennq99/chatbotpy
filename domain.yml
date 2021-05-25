@@ -35,13 +35,13 @@ responses:
     - text: "Xin chào bạn, Tôi là bot của Haui. Vui lòng gõ 'chức năng' đẻ biết thêm thông tin"
 
   utter_do_somethings:
-    - text: ""
+    - text: "Chức năng của bot: hỏi về các ngành đào tạo, điểm thi của các khoa, hồ sơ nhập học, địa điểm học của các khoa"
 
   utter_mood_great:
-    - text: "Được đấy"
+    - text: "Cảm ơn bạn đã sử dụng bot"
 
   utter_goodbye:
-    - text: "bai"
+    - text: "Tạm biệt"
 
   utter_deny:
     - text: "không hiểu gì cơ?"
@@ -49,17 +49,14 @@ responses:
   utter_unknown:
     - text: "Tôi không hiểu"
 
-  utter_major_mark:
-    - text: "Điểm"
-
-  utter_major_location:
+  action_location:
     - text: "nơi học"
 
   utter_major_info:
-    - text: "Ngành học"
+    - text: "Nhà trường có rất nhiều ngành học bao gồm: ngành CNTT, ngành cơ khí, ngành cơ điẹn tử, ngành tự động hoá, nhành du lịch, ngành ngôn ngữ, ngành công nghệ sinh học ...."
 
   utter_profile:
-    - text: "Thông tin cá nhân"
+    - text: "Thông tin cá nhân bao gồm : Giấy khai sinh, giấy tốt nghiệp cấp 3, giấy báo trúng tuyển, bằng tốt nghiệp cấp 3, giấy khám sức khoẻ ..."
 
   utter_iamabot:
     - text: "I am a bot, powered by Rasa."
@@ -72,12 +69,12 @@ actions:
   - utter_goodbye
   - utter_deny
   - utter_unknown
-  - utter_major_mark
-  - utter_major_location
+  - action_location
   - utter_major_info
   - utter_profile
   - utter_iamabot
   - action_test
+  - action_score
 
 session_config:
   session_expiration_time: 60

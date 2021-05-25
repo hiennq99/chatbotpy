@@ -23,11 +23,8 @@ nlu:
 
   - intent: give_name
     examples: |
-      - [Anh](cust_sex) là [Thắng](cust_name)
-      - [Chị](cust_sex) là [Hằng](cust_name)
-      - [Em](cust_sex) là [Trang](cust_name)
-      - [Cô](cust_sex) [Vân](cust_name)
-      - [Chú](cust_sex) [Hùng](cust_name)
+      - tôi là Hiển
+      - Tôi là thắng
 
   - intent: eat
     examples: |
@@ -130,6 +127,18 @@ nlu:
       - điểm của khoa tự động hoá
       - điểm của khoa may
       - điểm của khoa hoá
+      - điểm đầu vào của khoa công nghệ thông tin
+      - điểm đầu vào khoa CNTT
+      - điểm đầu vào khoa cntt
+      - điểm đầu vào khoa cơ khí
+      - điểm đầu vào khoa tự động hoá
+      - điểm đầu vào của khoa may
+      - điểm đầu vào của khoa hoá
+      - điểm đầu vào của khoa cntt
+      - điểm đầu vào của khoa cơ khí
+      - điểm đầu vào của khoa tự động hoá
+      - điểm đầu vào của khoa may
+      - điểm đầu vào của khoa hoá
 
   - intent: major_location
     examples: |
@@ -140,6 +149,11 @@ nlu:
       - khoa tự động hoá học ở đâu
       - khoa may học ở đâu
       - khoa hoá học ở đâu
+      - năm 1 khoa may học ở đâu
+      - năm 1 khoa cntt học ở đâu
+      - năm 1 khoa cơ khí học ở đâu
+      - năm 1 khoa cơ điện tử học ở đâu
+      - năm 1 khoa điện học ở đâu
 
   - intent: major_info
     examples: |
@@ -150,6 +164,11 @@ nlu:
       - các khoa của trường
       - thông tin các ngành đào tạo
       - ngành đào tạo
+      - KHOA DAO TAO
+      - KHOA ĐÀO TẠO
+      - CÁC NGÀNH ĐÀO TẠO
+      - THÔNG TIN CÁC KHOA 
+      - CÁC KHOA CỦA TRƯỜNG
 
   - intent: profile
     examples: |
@@ -160,6 +179,17 @@ nlu:
       - yêu cầu thông tin
       - hồ sơ xét tuyển
       - thông tin hồ sơ
+      - khi nhập học cần nộp những gì
+      - những điều cần biết khi nhập học
+      - nhung dieu can biet khi nhap hoc 
+      - ho so nhap hoc
+      - ho so ca nhan 
+      - ho so 
+      - thong tin ca nhan 
+      - ho so xet tuyen
+      - Ho So Xet Tuyen
+      - Hồ sơ xét tuyển
+      - HỒ SƠ XÉT TUYỂN
 
   - intent: ask_somethings
     examples: |

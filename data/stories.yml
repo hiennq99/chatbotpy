@@ -29,6 +29,11 @@ stories:
       - intent: eat
       - action: action_test
 
+  - story: score
+    steps:
+      - intent: major_mark
+      - action: action_score
+
   - story: ask unknown
     steps:
       - intent: greet
@@ -43,7 +48,7 @@ stories:
       - intent: do_somethings
       - action: utter_do_somethings
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: ask major_info
     steps:
@@ -52,7 +57,7 @@ stories:
       - intent: do_somethings
       - action: utter_do_somethings
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: ask profile
     steps:
@@ -61,7 +66,7 @@ stories:
       - intent: profile
       - action: utter_profile
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: ask major_info location
     steps:
@@ -72,7 +77,7 @@ stories:
       - intent: major_info
       - action: utter_major_info
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: ask do somethings profile
     steps:
@@ -81,7 +86,7 @@ stories:
       - intent: profile
       - action: utter_profile
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
       - intent: profile
       - action: utter_profile
       - intent: do_somethings
@@ -96,20 +101,20 @@ stories:
       - intent: profile
       - action: utter_profile
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: ask do somethins all
     steps:
       - intent: do_somethings
       - action: utter_do_somethings
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
       - intent: do_somethings
       - action: utter_do_somethings
       - intent: profile
       - action: utter_profile
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: ask do unknown
     steps:
@@ -125,9 +130,9 @@ stories:
       - intent: major_info
       - action: utter_major_info
       - intent: major_mark
-      - action: utter_major_mark
+      - action: action_score
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: ask location mark
     steps:
@@ -136,9 +141,9 @@ stories:
       - intent: major_info
       - action: utter_major_info
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
       - intent: major_mark
-      - action: utter_major_mark
+      - action: action_score
 
   - story: deny
     steps:
@@ -169,12 +174,12 @@ stories:
   - story: do major_mark
     steps:
       - intent: major_mark
-      - action: utter_major_mark
+      - action: action_score
 
   - story: do major_location
     steps:
       - intent: major_location
-      - action: utter_major_location
+      - action: action_location
 
   - story: do major_info
     steps:
